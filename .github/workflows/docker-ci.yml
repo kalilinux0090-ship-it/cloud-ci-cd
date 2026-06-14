@@ -23,3 +23,19 @@ jobs:
 
       - name: Push Docker image
         run: docker push raj01docker/cloud-ci-cd:latest
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            docker pull raj01docker/cloud-ci-cd:latest
+            docker rm -f cloud-ci-cd-app || true
+            docker run -d --name cloud-ci-cd-app -p 8081:80 raj01docker/cloud-ci-cd:latest
