@@ -54,19 +54,28 @@ http://<EC2-PUBLIC-IP>:8081
 
 ---
 
-## Screenshots
-
-### GitHub Actions Success
-
-(Add Screenshot)
+## Project Screenshots
 
 ### Docker Hub Repository
+![Docker Hub](screenshots/Docker%20Hub%20Repository.PNG)
 
-(Add Screenshot)
+### GitHub Actions Green Success
+![Actions](screenshots/GitHub%20Actions%20Green%20Success.PNG)
 
-### Running Application
+### Docker Push Success
+![Push](screenshots/Docker%20Push%20Success.PNG)
 
-(Add Screenshot)
+### Browser Output
+![App](screenshots/Browser%20Output.PNG)
+
+### GitHub Actions Workflow
+![Workflow](screenshots/5.%20GitHub%20Actions%20Workflow.PNG)
+
+### Docker Images
+![Images](screenshots/docker%20images.PNG)
+
+### Docker Login
+![Login](screenshots/docker%20login.PNG)
 
 ---
 
